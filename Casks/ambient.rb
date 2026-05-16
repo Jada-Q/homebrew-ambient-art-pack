@@ -4,7 +4,7 @@ cask "ambient" do
 
   url "https://github.com/Jada-Q/ambient-art-pack/releases/download/v#{version}/Ambient.app.zip"
   name "Ambient"
-  desc "Ambient art pack — desktop wallpaper menu bar app (5 pieces, city picker)"
+  desc "Ambient art pack — desktop wallpaper menu bar app (6 pieces, city picker)"
   homepage "https://github.com/Jada-Q/ambient-art-pack"
 
   app "Ambient.app"
