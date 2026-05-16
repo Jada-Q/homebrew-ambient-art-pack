@@ -17,17 +17,23 @@ cask "ambient" do
   ]
 
   caveats <<~EOS
-    Ambient is ad-hoc signed (not Apple-notarized). First launch macOS will block.
+    Ambient is ad-hoc signed (not Apple-notarized). macOS 15 Sequoia blocks
+    first launch.
 
     To open the first time:
-      right-click Ambient.app in /Applications/ → Open → Open
+      1. Double-click Ambient.app → macOS shows "Apple could not verify…"
+      2. Click "Done" (NOT "Move to Trash")
+      3. System Settings → Privacy & Security → scroll to Security section
+      4. Click "Open Anyway" next to Ambient → enter password
+      5. Double-click Ambient.app → opens normally
 
-    Or via menu bar:
-      System Settings → Privacy & Security → click "Open Anyway" for Ambient.
+    Or via Terminal (faster):
+      xattr -dr com.apple.quarantine /Applications/Ambient.app
+      open -a Ambient
 
     After first launch:
-      Menu bar 🌊 icon → pick piece + city → desktop becomes ambient art.
-      Ambient stays running in the background; quit via menu bar → Quit Ambient.
+      Menu bar 🌊 → pick piece + city → desktop becomes ambient art.
+      Ambient stays running in the background; quit via menu bar → Quit.
 
     For idle-triggered screensaver (instead of always-on wallpaper):
       brew install --cask Jada-Q/ambient-art-pack/ambient-art-screensaver
