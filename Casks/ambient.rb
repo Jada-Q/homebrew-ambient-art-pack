@@ -1,6 +1,6 @@
 cask "ambient" do
-  version "0.2.0"
-  sha256 "6256ffbdf94e4b9226f70c3768945779b6099d6addf711e932631cfe72f2c1e0"
+  version "0.3.0"
+  sha256 "a0f37f12e83a677a4def72734c178b7b2d5b33b158315c8d5cd0608e7b048a40"
 
   url "https://github.com/Jada-Q/ambient-art-pack/releases/download/v#{version}/Ambient.app.zip"
   name "Ambient"
