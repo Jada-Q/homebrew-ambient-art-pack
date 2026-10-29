@@ -17,6 +17,16 @@ cask "ambient" do
   ]
 
   caveats <<~EOS
+    Tap trust (one-time, both casks in this tap)
+      Current Homebrew will not load casks from a third-party tap until the tap
+      is trusted. If the install stopped with "Refusing to load cask … from
+      untrusted tap", run:
+
+        brew trust jada-q/ambient-art-pack
+
+      Trusting the tap covers every cask in it, so this is a one-time step.
+      Reverse it with: brew untrust jada-q/ambient-art-pack
+
     Ambient is ad-hoc signed (not Apple-notarized). macOS 15 Sequoia blocks
     first launch.
 
