@@ -4,16 +4,18 @@ cask "ambient" do
 
   url "https://github.com/Jada-Q/ambient-art-pack/releases/download/v#{version}/Ambient.app.zip"
   name "Ambient"
-  desc "Ambient art pack — desktop wallpaper menu bar app (6 pieces, city picker)"
+  desc "Desktop wallpaper menu bar app with six real-time art pieces and city picker"
   homepage "https://github.com/Jada-Q/ambient-art-pack"
+
+  depends_on :macos
 
   app "Ambient.app"
 
   uninstall quit: "net.jada.ambient"
 
   zap trash: [
-    "~/Library/Preferences/net.jada.ambient.plist",
     "~/Library/Application Support/Ambient",
+    "~/Library/Preferences/net.jada.ambient.plist",
   ]
 
   caveats <<~EOS

@@ -4,8 +4,10 @@ cask "ambient-art-screensaver" do
 
   url "https://github.com/Jada-Q/ambient-art-pack/releases/download/v#{version}/ambient-art-screensaver-#{version}.pkg"
   name "Ambient Art Pack Screensaver"
-  desc "Five ambient art pieces as a Mac screensaver (WebView Screensaver + remote URL list)"
+  desc "Screensaver showing five real-time art pieces from a remote URL list"
   homepage "https://github.com/Jada-Q/ambient-art-pack"
+
+  depends_on :macos
 
   pkg "ambient-art-screensaver-#{version}.pkg"
 
